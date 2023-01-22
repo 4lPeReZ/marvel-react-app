@@ -19,19 +19,19 @@ function Characters() {
     fetch();
   },[urlAPI])
 
-  //No se porque se parte la app al hacer diferentes peticiones
+  //Cada vez que se recarga la pagina mediante el navegador se rompe la llamada a la API o la respuesta.
   
-console.log(charactersData[0].id)
+// console.log(charactersData[0].id)
   return (
     <div>
+        {/* {charactersData[1].thumbnail.path}.{charactersData[1].thumbnail.extension} */}
+        {charactersData[1].name}
 
-        {/* {charactersData[0].name}
-
-        <p></p>
+        {/* <p></p> */}
         
-        <img src="{}" alt="" />
+        <img src={`${charactersData[1].thumbnail.path}.${charactersData[1].thumbnail.extension}`} alt="" />
 
-        {charactersData[1].name} */}
+        {/* {charactersData[1].name} */}
         
     </div>
   );
